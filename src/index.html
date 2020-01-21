@@ -8,41 +8,61 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<section class="section">
-			<div class="container">
-				<h1 class="title has-text-white">Sailthru Zip Converter</h1>
-				<p class="subtitle has-text-white">Covert zips to be used in Sailthru.</p>
-			</div>
-			<div class="container">
-				<form id="zip-converter">
-					<div class="field">
-						<label class="label">Input</label>
-						<div class="control">
-							<textarea class="textarea" placeholder="Zip codes must be comma seperated..." id="zip-input" autofocus></textarea>
-						</div>
-					</div>
-					<div class="field is-grouped is-grouped-right">
-						<p class="control">
-							<button id="submit-button" class="button is-primary">
-								Submit
-							</button>
-						</p>
-						<p class="control">
-							<input type="reset" value="Reset" id="reset-button" class="button is-light" />
-						</p>
-					</div>
-				</form>
-			</div>
-			<div class="container">
-				<div class="field">
-					<label class="label">Output</label>
-					<textarea class="textarea" id="zip-output" onclick="this.focus();this.select()" readonly></textarea>
+		<main>
+			<section class="section" id="header-message">
+				<div id="message">
+					Work in progress. Please email <a style="color:#ffe06a;" href="mailto:pasanchez@aclu.org?subject=Zippy"><strong>pasanchez@aclu.org</strong></a> with suggestiong and bugs.
 				</div>
-			</div>
-			<div class="container sticky-footer">
-				<p>&copy; 2020 Created by <a href="https://psd.sh/home">Pavel Sanchez</a>.</p>
-			</div>
-		</section>
+				<span id="close-header">X</span>
+			</section>
+			<section class="hero is-medium">
+				<div class="hero-body">
+					<div class="container">
+						<h1 class="title">Sailthru Zip Converter</h1>
+						<p class="subtitle">Covert zips to be used in Sailthru.</p>
+					</div>
+				</div>
+			</section>
+			<section class="section">
+				<div class="container form">
+					<p class="instructions"><strong>Instructions:</strong> Paste zip codes in the box below. Zip codes must be comma-seperated in order for it to work.</p>
+					<form id="zip-converter">
+						<div class="field">
+							<label class="label">Input</label>
+							<div class="control">
+								<textarea class="textarea" placeholder="Zip codes must be comma seperated..." id="zip-input" autofocus></textarea>
+							</div>
+						</div>
+						<div class="field is-grouped is-grouped-right">
+							<p class="control">
+								<button id="submit-button" class="button">
+									Submit
+								</button>
+							</p>
+							<p class="control">
+								<input type="reset" value="Reset" id="reset-button" class="button is-light" />
+							</p>
+						</div>
+					</form>
+				</div>
+				<div class="container output">
+					<div class="field">
+						<label class="label">Output</label>
+						<textarea class="textarea" id="zip-output" onclick="this.focus();this.select()" readonly></textarea>
+					</div>
+				</div>
+				<div class="container wip">
+					<p>
+						<strong>Work in progress.</strong> Please email <a href="mailto:pasanchez@aclu.org?subject=Zippy"><strong>pasanchez@aclu.org</strong></a> with suggestions and bugs.
+					</p>
+				</div>
+			</section>
+			<section class="section sticky-footer">
+				<div class="container">
+					<p>&copy; 2020 Created by <a href="https://psd.sh/home">Pavel Sanchez</a>.</p>
+				</div>
+			</section>
+		</main>
 		<script src="app.js"></script>
 	</body>
 </html>
