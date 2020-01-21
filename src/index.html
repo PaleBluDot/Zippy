@@ -18,7 +18,7 @@
 					<div class="field">
 						<label class="label">Input</label>
 						<div class="control">
-							<textarea class="textarea" placeholder="Zip codes must be comma seperated..." id="zip-input" autofocus required></textarea>
+							<textarea class="textarea" placeholder="Zip codes must be comma seperated..." id="zip-input" autofocus></textarea>
 						</div>
 					</div>
 					<div class="field is-grouped is-grouped-right">
@@ -36,7 +36,7 @@
 			<div class="container">
 				<div class="field">
 					<label class="label">Output</label>
-					<textarea class="textarea" id="zip-output"></textarea>
+					<textarea class="textarea" id="zip-output" onclick="this.focus();this.select()" readonly></textarea>
 				</div>
 			</div>
 			<div class="container sticky-footer">
