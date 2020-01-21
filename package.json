@@ -1,0 +1,16 @@
+{
+	"name": "zippy",
+	"version": "0.1.0",
+	"description": "A zip code converter tool for use on Sailthru. ",
+	"main": "src/app.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PaleBluDot/Zippy.git"
+	},
+	"author": "Pavel Sanchez",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/PaleBluDot/Zippy/issues"
+	},
+	"homepage": "https://github.com/PaleBluDot/Zippy#readme"
+}
