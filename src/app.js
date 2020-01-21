@@ -5,6 +5,12 @@ const form = document.getElementById('zip-converter');
 const input = document.getElementById('zip-input');
 const output = document.getElementById('zip-output');
 const submitBtn = document.getElementById('submit-button');
+const headerMsg = document.getElementById('header-message');
+const headerMsgClose = document.getElementById('close-header');
+
+headerMsgClose.addEventListener('click', function() {
+	headerMsg.style.display = 'none';
+});
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
