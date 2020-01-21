@@ -89,6 +89,7 @@ Variables
 	--aclu-red: #ef404d;
 	--aclu-white: #ffffff;
 	--aclu-black: #000000;
+	--aclu-black-transparent: #00000080;
 	--aclu-light-azure: #a3dbe3;
 	--aclu-light-green: #a7d7b5;
 	--aclu-light-orange: #fcaa17;
@@ -150,17 +151,20 @@ Fonts
 	font-style: normal;
 	font-display: swap;
 	src: local('GT America Extended Bold'),
-		url(//Fonts/GT-America-Extended-Bold.otf) format('embedded-opentype');
+		url(/Fonts/GT-America-Extended-Bold.otf) format('embedded-opentype');
 }
 
 /* ---------------------------------------
 Default
 --------------------------------------- */
 body {
-	background: var(--aclu-blue);
 	height: 100%;
 	margin-bottom: 0;
 	font-family: var(--aclu-body-font);
+}
+
+main {
+	height: 100vh;
 }
 
 input,
@@ -170,8 +174,57 @@ select {
 	width: 100%;
 }
 
+.button {
+	border-radius: 0 !important;
+	padding: 5px 40px;
+}
+
+.section#header-message,
+#header-message {
+	padding: 5px;
+}
+
+#header-message {
+	display: none;
+	justify-content: space-between;
+	background: var(--aclu-blue);
+	color: var(--aclu-white);
+}
+
+#message {
+	margin-left: 20px;
+}
+
+.wip,
+.instructions {
+	padding: 20px;
+}
+
+.wip {
+	margin-top: 40px;
+	background: var(--aclu-light-pink);
+}
+
+.wip p {
+	margin-bottom: 0;
+}
+
+.instructions {
+	background: var(--aclu-light-azure);
+}
+
+#close-header {
+	font-weight: bold;
+	display: flex;
+	margin-right: 20px;
+}
+
 .section {
-	padding-top: 0;
+	padding-top: 40px;
+}
+
+.hero {
+	background: var(--aclu-light-yellow);
 }
 
 .title {
@@ -180,26 +233,35 @@ select {
 
 .subtitle {
 	font-family: var(--aclu-subheadline-font);
-	font-weight: 400;
+	font-weight: 700;
 }
 
 #zip-output {
 	background: var(--aclu-white);
 	padding: 11px;
 	border-radius: 4px;
-	border: 0;
+	border: ;
 	word-break: break-all;
 	color: black;
+	box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+}
+
+#submit-button {
+	background: var(--aclu-black);
+	color: var(--aclu-white);
+}
+
+#reset-button {
+	background: var(--aclu-white);
+	color: var(--aclu-black);
+	border: 2px var(--aclu-black) solid;
 }
 
 .sticky-footer {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.5);
+	background: var(--aclu-black);
 	color: var(--aclu-white);
 	padding: 20px;
-	width: 100%;
-	bottom: 0;
-	left: 0;
+	align-self: flex-end;
 }
 .sticky-footer p {
 	margin-bottom: 0;
