@@ -82,13 +82,85 @@ select {
 }
 
 /* ---------------------------------------
-MY STYLES
+Variables
+--------------------------------------- */
+:root {
+	--aclu-blue: #0055aa;
+	--aclu-red: #ef404d;
+	--aclu-white: #ffffff;
+	--aclu-black: #000000;
+	--aclu-light-azure: #a3dbe3;
+	--aclu-light-green: #a7d7b5;
+	--aclu-light-orange: #fcaa17;
+	--aclu-light-pink: #fabeaf;
+	--aclu-light-yellow: #ffe06a;
+	--aclu-dark-burgundy: #691b40;
+	--aclu-dark-gray: #3c3532;
+	--aclu-dark-green: #00343a;
+	--aclu-dark-navy: #130f54;
+	--aclu-dark-purple: #552564;
+	--aclu-body-font: gtamstandard, Arial, Helvetica, sans-serif;
+	--aclu-headline-font: gtamextended, Arial, Helvetica, sans-serif;
+	--aclu-subheadline-font: gtamcompressed, Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------------------------
+Fonts
+--------------------------------------- */
+@font-face {
+	font-family: gtamstandard;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('GT America Standard Regular'),
+		url(/Fonts/GT-America-Standard-Regular.otf) format('embedded-opentype');
+}
+
+@font-face {
+	font-family: gtamstandard;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: local('GT America Standard Bold'),
+		url(/Fonts/GT-America-Standard-Bold.otf) format('embedded-opentype');
+}
+
+@font-face {
+	font-family: gtamcompressed;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local('GT America Compressed Regular'),
+		url(/Fonts/GT-America-Compressed-Regular.otf)
+			format('embedded-opentype');
+}
+
+@font-face {
+	font-family: gtamcompressed;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: local('GT America Compressed Bold'),
+		url(/Fonts/GT-America-Compressed-Bold.otf) format('embedded-opentype');
+}
+
+@font-face {
+	font-family: gtamextended;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: local('GT America Extended Bold'),
+		url(//Fonts/GT-America-Extended-Bold.otf) format('embedded-opentype');
+}
+
+/* ---------------------------------------
+Default
 --------------------------------------- */
 body {
-	background: #0055aa;
-	color: #ffffff;
+	background: var(--aclu-blue);
 	height: 100%;
 	margin-bottom: 0;
+	font-family: var(--aclu-body-font);
 }
 
 input,
@@ -102,8 +174,17 @@ select {
 	padding-top: 0;
 }
 
+.title {
+	font-family: var(--aclu-headline-font);
+}
+
+.subtitle {
+	font-family: var(--aclu-subheadline-font);
+	font-weight: 400;
+}
+
 #zip-output {
-	background: rgba(255, 255, 255, 0.9);
+	background: var(--aclu-white);
 	padding: 11px;
 	border-radius: 4px;
 	border: 0;
@@ -114,6 +195,7 @@ select {
 .sticky-footer {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.5);
+	color: var(--aclu-white);
 	padding: 20px;
 	width: 100%;
 	bottom: 0;
