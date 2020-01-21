@@ -16,16 +16,30 @@ form.addEventListener('submit', e => {
 	e.preventDefault();
 	const inputVal = input.value;
 	const res = inputVal.split(',');
+	
+	// TODO: This is messy. Clean up!
+	if(output.textContent !== '') {
+		output.textContent = ''
+		for (let i = 0; i < res.length; i++) {
+			res[i] = res[i].replace(/^\s*/, '').replace(/\s*$/, '');
+			const convertedZips = `"${res[i]}"|`;
 
-	for (let i = 0; i < res.length; i++) {
-		res[i] = res[i].replace(/^\s*/, '').replace(/\s*$/, '');
-		const convertedZips = `"${res[i]}"|`;
+			output.innerHTML += convertedZips;
+		}
 
-		output.innerHTML += convertedZips;
+		const removePipe = output.textContent.slice(0, -1);
+		output.innerHTML = removePipe;
+	} else {
+		for (let i = 0; i < res.length; i++) {
+			res[i] = res[i].replace(/^\s*/, '').replace(/\s*$/, '');
+			const convertedZips = `"${res[i]}"|`;
+
+			output.innerHTML += convertedZips;
+		}
+
+		const removePipe = output.textContent.slice(0, -1);
+		output.innerHTML = removePipe;
 	}
-
-	const removePipe = output.textContent.slice(0, -1);
-	output.innerHTML = removePipe;
 	input.value = '';
 });
 
