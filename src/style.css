@@ -174,6 +174,16 @@ select {
 	width: 100%;
 }
 
+a,
+a:active {
+	color: var(--aclu-blue);
+}
+
+a:visited,
+a:hover {
+	color: var(--aclu-dark-navy);
+}
+
 .button {
 	border-radius: 0 !important;
 	padding: 5px 40px;
@@ -258,7 +268,7 @@ select {
 }
 
 .sticky-footer {
-	background: var(--aclu-black);
+	background: var(--aclu-dark-burgundy);
 	color: var(--aclu-white);
 	padding: 20px;
 	align-self: flex-end;
